@@ -2,11 +2,89 @@
 <html>
   <div class="container">
     <head>
+      <title ="My Dash"></title>
       <div class="header">
-        <h1 class="title">Welcome, Ashley</h1>
+        <h1 class="title">Welcome back, Ashley</h1>
       </div>
     </head>
-    <body>
+    <div>
+        <div class="wrapper"
+
+            <div style="
+
+                margin-bottom: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 85%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            ">
+                <form onsubmit="event.preventDefault(); window.open('https://duckduckgo.com/?q=' + encodeURIComponent(this.query.value), '_blank');" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+                    <input
+                        type="text"
+                        name="query"
+                        placeholder="Search DuckDuckGo..."
+                        required
+                        style="
+                            flex: 1; /* Allows the input to grow and fill the space */
+                            padding: 20px;
+                            border-radius: 10px;
+                            border: 3px solid #332d58;
+                            font-size: 20px;
+                            background-color: #1b1b4bc7;
+                            color: white;
+                            margin-right: 10px; /* Space between input and button */
+                        "
+                    />
+                    <button
+                        type="submit"
+                        style="
+                            padding: 20px;
+                            border-style: solid;
+                            border-width: 3px;
+                            border-color: #1b1b4bc7;
+                            border-radius: 10px;
+                            background-color: #332d58;
+                            color: white;
+                            width: 200px;
+                            font-size: 25px;
+                            cursor: pointer;
+                        "
+                    >
+                        Search
+                    </button>
+                </form>
+            </div>
+
+                <a
+                    class="weatherwidget-io"
+                    href="https://forecast7.com/en/42d36n71d06/boston/?unit=us"
+                    data-label_1="BOSTON"
+                    data-label_2="WEATHER"
+                    data-font="Ubuntu"
+                    data-icons="Climacons Animated"
+                    data-theme="pure"
+                    data-basecolor="#1b1b4bc7"
+                    data-textcolor="#f0e8e8"
+                    data-highcolor="#ddd32a"
+                    data-lowcolor="#0490f3"
+                    >Boston Weather</a
+                >
+                <script>
+                    !(function (d, s, id) {
+                    var js,
+                        fjs = d.getElementsByTagName(s)[0];
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "https://weatherwidget.io/js/widget.min.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                    })(document, "script", "weatherwidget-io-js");
+                </script>
+
+        </div>
       <div class="nav">
         <div class="button">
           <img src="icons/buttons/lemmy.png" class="butcon" />Lemmy
@@ -24,7 +102,7 @@
           <img src="icons/buttons/pirate.png" class="butcon" />Yarggh
         </div>
         <div class="button">
-          <img src="icons/buttons/hulu.png" class="butcon" />Hullllllu
+          <img src="icons/buttons/hulu.png" class="butcon" />Hulu
         </div>
       </div>
     </body>
