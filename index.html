@@ -1,110 +1,125 @@
-<link rel="stylesheet" href="style.css" />
+<!doctype html>
 <html>
-  <div class="container">
-    <head>
-      <title ="My Dash"></title>
+  <head>
+    <title>My Dash</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
       <div class="header">
         <h1 class="title">Welcome back, Ashley</h1>
       </div>
-    </head>
-    <div>
-        <div class="wrapper"
-
-            <div style="
-
-                margin-bottom: 50px;
-                margin-left: auto;
-                margin-right: auto;
-                width: 85%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            ">
-                <form onsubmit="event.preventDefault(); window.open('https://duckduckgo.com/?q=' + encodeURIComponent(this.query.value), '_blank');" style="width: 100%; display: flex; justify-content: center; align-items: center;">
-                    <input
-                        type="text"
-                        name="query"
-                        placeholder="Search DuckDuckGo..."
-                        required
-                        style="
-                            flex: 1; /* Allows the input to grow and fill the space */
-                            padding: 20px;
-                            border-radius: 10px;
-                            border: 3px solid #332d58;
-                            font-size: 20px;
-                            background-color: #1b1b4bc7;
-                            color: white;
-                            margin-right: 10px; /* Space between input and button */
-                        "
-                    />
-                    <button
-                        type="submit"
-                        style="
-                            padding: 20px;
-                            border-style: solid;
-                            border-width: 3px;
-                            border-color: #1b1b4bc7;
-                            border-radius: 10px;
-                            background-color: #332d58;
-                            color: white;
-                            width: 200px;
-                            font-size: 25px;
-                            cursor: pointer;
-                        "
-                    >
-                        Search
-                    </button>
-                </form>
-            </div>
-
-                <a
-                    class="weatherwidget-io"
-                    href="https://forecast7.com/en/42d36n71d06/boston/?unit=us"
-                    data-label_1="BOSTON"
-                    data-label_2="WEATHER"
-                    data-font="Ubuntu"
-                    data-icons="Climacons Animated"
-                    data-theme="pure"
-                    data-basecolor="#1b1b4bc7"
-                    data-textcolor="#f0e8e8"
-                    data-highcolor="#ddd32a"
-                    data-lowcolor="#0490f3"
-                    >Boston Weather</a
-                >
-                <script>
-                    !(function (d, s, id) {
-                    var js,
-                        fjs = d.getElementsByTagName(s)[0];
-                    if (!d.getElementById(id)) {
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = "https://weatherwidget.io/js/widget.min.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }
-                    })(document, "script", "weatherwidget-io-js");
-                </script>
-
+      <div class="wrapper">
+        <div class="search">
+          <form
+            onsubmit="event.preventDefault(); window.open('https://duckduckgo.com/?q=' + encodeURIComponent(this.query.value), '_blank');"
+            style="
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <input
+              type="text"
+              name="query"
+              placeholder="Search DuckDuckGo..."
+              required
+              style="
+                flex: 1;
+                padding: 20px;
+                border-radius: 10px;
+                border: 3px solid #332d58;
+                font-size: 20px;
+                background-color: #1b1b4bc7;
+                color: white;
+                margin-right: 10px;
+                -webkit-box-shadow: 11px 13px 40px 3px rgba(0, 0, 0, 1);
+                -moz-box-shadow: 11px 13px 40px 3px rgba(0, 0, 0, 1);
+                box-shadow: 11px 13px 40px 3px rgba(0, 0, 0, 1);
+              "
+            />
+            <button
+              type="submit"
+              style="
+                padding: 20px;
+                border-style: solid;
+                border-width: 3px;
+                border-color: #1b1b4bc7;
+                border-radius: 10px;
+                background-color: #332d58;
+                color: white;
+                width: 200px;
+                font-size: 25px;
+                cursor: pointer;
+                -webkit-box-shadow: 11px 13px 40px 3px rgba(0, 0, 0, 1);
+                -moz-box-shadow: 11px 13px 40px 3px rgba(0, 0, 0, 1);
+                box-shadow: 11px 13px 40px 3px rgba(0, 0, 0, 1);
+              "
+            >
+              Search
+            </button>
+          </form>
         </div>
-      <div class="nav">
-        <div class="button">
-          <img src="icons/buttons/lemmy.png" class="butcon" />Lemmy
-        </div>
-        <div class="button">
-          <img src="icons/buttons/cockpit.png" class="butcon" />Cockpit
-        </div>
-        <div class="button">
-          <img src="icons/buttons/jellyfin.png" class="butcon" />Jellyfin
-        </div>
-        <div class="button">
-          <img src="icons/buttons/prowlarr.png" class="butcon" />Prowlarr
-        </div>
-        <div class="button">
-          <img src="icons/buttons/pirate.png" class="butcon" />Yarggh
-        </div>
-        <div class="button">
-          <img src="icons/buttons/hulu.png" class="butcon" />Hulu
-        </div>
+        <a
+          class="weatherwidget-io"
+          href="https://forecast7.com/en/42d36n71d06/boston/?unit=us"
+          data-label_1="Boston"
+          data-label_2="Weather"
+          data-font="Ubuntu"
+          data-icons="Climacons Animated"
+          data-theme="pure"
+          data-basecolor="#1b1b4bc7"
+          data-textcolor="#f0e8e8"
+          data-highcolor="#ddd32a"
+          data-lowcolor="#0490f3"
+          >Boston Weather</a
+        >
+        <script>
+          !(function (d, s, id) {
+            var js,
+              fjs = d.getElementsByTagName(s)[0];
+            if (!d.getElementById(id)) {
+              js = d.createElement(s);
+              js.id = id;
+              js.src = "https://weatherwidget.io/js/widget.min.js";
+              fjs.parentNode.insertBefore(js, fjs);
+            }
+          })(document, "script", "weatherwidget-io-js");
+        </script>
       </div>
-    </body>
-  </div>
+      <div class="nav">
+        <a href="https://lemmy.world">
+          <div class="button">
+            <img src="icons/buttons/lemmy.png" class="butcon" />Lemmy
+          </div>
+        </a>
+        <a href="http://localhost:9090">
+          <div class="button">
+            <img src="icons/buttons/cockpit.png" class="butcon" />Cockpit
+          </div>
+        </a>
+        <a href="https://10.88.0.2:8096">
+          <div class="button">
+            <img src="icons/buttons/jellyfin.png" class="butcon" />Jellyfin
+          </div>
+        </a>
+        <a href="https://github.com">
+          <div class="button">
+            <img src="icons/buttons/github.png" class="butcon" />Github
+          </div>
+        </a>
+        <a href="https://tpb.party">
+          <div class="button">
+            <img src="icons/buttons/pirate.png" class="butcon" />Yarggh
+          </div>
+        </a>
+        <a href="https://hulu.com">
+          <div class="button">
+            <img src="icons/buttons/hulu.png" class="butcon" />Hulu
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
 </html>
